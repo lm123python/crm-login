@@ -1,22 +1,13 @@
-import unittest
+# 时间 2021/7/14 19:48
+
 from crm.aTrip_page.crm_Base import *
 from crm.aTrip_sear.crm_searche import *
 
 import time
 
 
-class MyTestCase(unittest.TestCase,Search):
-    def setUp(self) -> None:
+class MyTestCase(Search):
 
-        self.time=time
-        print('setup')
-
-    def tearDown(self) -> None:
-        # time.sleep(5)
-        # print('teardown')
-        # # self.driver.close()
-        # Base.close()
-        pass
 
     def test_login1(self):
         a=Search()
@@ -31,7 +22,5 @@ class MyTestCase(unittest.TestCase,Search):
         b=self.text1()
         self.assertEqual(b,'用户或密码错误！请重新输入！')
         self.accept()
-
-
-if __name__ == '__main__':
-    unittest.main()
+a=MyTestCase()
+a.test_login2()

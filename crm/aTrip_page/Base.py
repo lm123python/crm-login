@@ -8,12 +8,10 @@ class base():
     options.add_argument('--ignore-certificate-errors')#取消流量器插件
     options.add_argument('--ignore-ssl-errors')#https协议
     driver=webdriver.Chrome(chrome_options=options)
-
     def __init__(self):#初始化
         self.driver.get("https://www.ctrip.com")
         self.driver.maximize_window()
         self.driver.implicitly_wait(5)
-
         # 查找元素的方法
         # *此时这个*代表可以接收任意多个非关键字参数
         # 查找元素
